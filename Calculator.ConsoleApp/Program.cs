@@ -36,6 +36,7 @@ namespace Calculator.ConsoleApp
                     UserOptions.NewQuery(); //call NewQuery method in UserOptions class
                 }
                 //Console.ReadKey(); //vs hack for pause ::NOTE::
+                //test
                 #endregion
 
                 #region Subtracter ------------------------------------------------------------------------------------------------------------------------------------------------
