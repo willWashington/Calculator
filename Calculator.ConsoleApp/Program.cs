@@ -10,7 +10,7 @@ namespace Calculator.ConsoleApp
     {
         static void Main(string[] args)
         {
-            UserOptions.Intro(); //call floatro method from UserOptions class
+            UserOptions.Intro(); //call Intro method from UserOptions class
         }
 
         public static void MathMachine(string operation) { //contains the main math for the MathMachine -- receives the operation as a result of user query
