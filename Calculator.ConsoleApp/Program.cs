@@ -15,25 +15,25 @@ namespace Calculator.ConsoleApp
         public static void MathMachine(string operation) { //contains the main math for the MathMachine -- receives the operation as a result of user query
             var floatOperandsGetter = new FloatOperandsGetter();
 
-            #region Adder ------------------------------------------------------------------------------------------------------------------------------------------------
-            if (string.Equals(operation, "add", StringComparison.InvariantCultureIgnoreCase)) //if user query results in "Add" or "add"
-            {
-                var floatOperands = floatOperandsGetter.Get();
-                var adder = new Adder(); //create new instance of adder method
-                var answer = adder.Add(floatOperands[0], floatOperands[1]); //push operand1 and operand2 variables to adder.Add method to add them together                    
-                Console.WriteLine($"{floatOperands[0]} + {floatOperands[1]} = {answer}"); //provide user with equation and answer
-                Console.WriteLine(Environment.NewLine); //create a new line
+                #region Adder ------------------------------------------------------------------------------------------------------------------------------------------------
+                if (string.Equals(operation, "add", StringComparison.InvariantCultureIgnoreCase)) //if user query results in "Add" or "add"
+                {
+                    var floatOperands = floatOperandsGetter.Get();
+                    var adder = new Adder(); //create new instance of adder method
+                    var answer = adder.Add(floatOperands[0], floatOperands[1]); //push operand1 and operand2 variables to adder.Add method to add them together                    
+                    Console.WriteLine($"{floatOperands[0]} + {floatOperands[1]} = {answer}"); //provide user with equation and answer
+                    Console.WriteLine(Environment.NewLine); //create a new line
                 #endregion
 
                 #region Subtracter ------------------------------------------------------------------------------------------------------------------------------------------------
-            }
-            else if (string.Equals(operation, "subtract", StringComparison.InvariantCultureIgnoreCase)) //if user query results in "Subtract" or "subtract"
-            {
-                var floatOperands = floatOperandsGetter.Get();
-                var adder = new Subtracter(); //create new instance of subtracter method
-                var answer = adder.Subtract(floatOperands[0], floatOperands[1]); //push operand1 and operand2 variables to subtracter.Subtract method to find difference
-                Console.WriteLine($"{floatOperands[0]} - {floatOperands[1]} = {answer}"); //provide user with equation and answer
-                Console.WriteLine(Environment.NewLine); //create a new line
+                }
+                else if (string.Equals(operation, "subtract", StringComparison.InvariantCultureIgnoreCase)) //if user query results in "Subtract" or "subtract"
+                {
+                    var floatOperands = floatOperandsGetter.Get();
+                    var adder = new Subtracter(); //create new instance of subtracter method
+                    var answer = adder.Subtract(floatOperands[0], floatOperands[1]); //push operand1 and operand2 variables to subtracter.Subtract method to find difference
+                    Console.WriteLine($"{floatOperands[0]} - {floatOperands[1]} = {answer}"); //provide user with equation and answer
+                    Console.WriteLine(Environment.NewLine); //create a new line
                 #endregion
 
                 #region Multiplier ------------------------------------------------------------------------------------------------------------------------------------------------
