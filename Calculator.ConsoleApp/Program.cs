@@ -10,13 +10,13 @@ namespace Calculator.ConsoleApp
     {
         static void Main(string[] args)
         {
-            UserOptions.Intro(); //call floatro method from UserOptions class
+            UserOptions.Intro(); //call Intro method from UserOptions class
         }
 
         public static void MathMachine(string operation) { //contains the main math for the MathMachine -- receives the operation as a result of user query
 
             #region Adder ------------------------------------------------------------------------------------------------------------------------------------------------
-            if (operation == "Add" || operation == "add") //if user query results in "Add" or "add"
+            if (string.Equals(operation, "add", StringComparison.InvariantCultureIgnoreCase)) //if user query results in "Add" or "add"
             {
                 Console.WriteLine("Operand1: "); //ask for first number
                 var o1 = Console.ReadLine(); //record first number as o1
@@ -41,7 +41,7 @@ namespace Calculator.ConsoleApp
 
                 #region Subtracter ------------------------------------------------------------------------------------------------------------------------------------------------
             }
-            else if (operation == "Subtract" || operation == "subtract") //if user query results in "Subtract" or "subtract"
+            else if (string.Equals(operation, "subtract", StringComparison.InvariantCultureIgnoreCase)) //if user query results in "Subtract" or "subtract"
             {
                 Console.WriteLine("Operand1: "); //line 21
                 var o1 = Console.ReadLine(); //line 22
@@ -64,7 +64,7 @@ namespace Calculator.ConsoleApp
 
                 #region Multiplier ------------------------------------------------------------------------------------------------------------------------------------------------
             }
-            else if (operation == "Multiply" || operation == "multiply") { //if user query results in "Multiply" or "multiply"
+            else if (string.Equals(operation, "multiply", StringComparison.InvariantCultureIgnoreCase)) { //if user query results in "Multiply" or "multiply"
                 Console.WriteLine("Operand1: "); //line 21
                 var o1 = Console.ReadLine(); //line 22
                 Console.WriteLine("Operand2: "); //line 23
@@ -86,7 +86,7 @@ namespace Calculator.ConsoleApp
 
                 #region Divider ------------------------------------------------------------------------------------------------------------------------------------------------
             }
-            else if (operation == "Divide" || operation == "divide") { //if user query results in "Divide" or "divide"
+            else if (string.Equals(operation, "divide")) { //if user query results in "Divide" or "divide"
                 Console.WriteLine("Operand1: "); //line 21
                 var o1 = Console.ReadLine(); //line 22
                 Console.WriteLine("Operand2: "); //line 23
