@@ -86,18 +86,16 @@ namespace Calculator.ConsoleApp
             Query(); //call Query method
         }
 
-        public static void Query()
+        public static void Query(string prompt = "What do you want to do")
         {
-            Console.WriteLine($"What do you want to do [{OptionsList}]?"); 
+            Console.WriteLine($"{prompt} [{OptionsList}]?");
             string operation = Console.ReadLine();
             Program.MathMachine(operation);
         }
 
         public static void NewQuery()
         {
-            Console.WriteLine($"What do you want to do now [{OptionsList}]?"); 
-            string operation = Console.ReadLine();
-            Program.MathMachine(operation);
+            Query("What do you want to do now");
         }
     }
     
