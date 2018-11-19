@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace Calculator.ConsoleApp {
-    public class FloatOperandsGetter {
+    public interface IFloatOperandsGetter {
+        float[] Get();
+    }
+
+    public class FloatOperandsGetter : IFloatOperandsGetter {
         public float[] Get() { //declare a float array method named Get
             var o1 = Get("Operand1"); // get first operand
             var o2 = Get("Operand2"); // get second operand
